@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(1);
+        display(numOfCoffee);
+        int price = calulateBill(numOfCoffee,false,false);
+        displayPrice(""+price);
         /*
         EditText  customerNameText = (EditText)findViewById(R.id.customerName);
         customerName = customerNameText.getText().toString();
